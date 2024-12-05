@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import TeamPage from './components/TeamPage';
+import WhatWeDo from './components/WhatWeDo';
+// import TeamPageWithBackground from './components/TeamPageWithBackground';
+// import TechStack from './components/TechStack';
+// import Projects from './components/Projects';
+// import Activities from './components/Activities'
+// import Contact from './components/Contact';
+// import { Router } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  <div>
+  <Navbar/>
+  <Hero/>
+  <TeamPage/>
+  <WhatWeDo/>
+  {/* <TeamPageWithBackground/> */}
+  {/* <TechStack/>
+  <Projects/>
+  <Activities/>
+  <Contact/> */}
+  </div>
+ 
+
   );
 }
 
