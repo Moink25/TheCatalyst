@@ -77,7 +77,7 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div className="relative w-full py-16 md:py-24 bg-[#f5f7fa] h-[200vh] md:h-[90vh]" id="what-we-do">
+    <div className="relative w-full py-16 md:py-24 bg-[#f5f7fa] h-[200vh] md:h-[100vh]" id="what-we-do">
       {/* Particle Background */}
       <div ref={bgRef} className="absolute top-0 left-0 w-full h-full z-0" />
 
@@ -102,7 +102,7 @@ const WhatWeDo = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          We provide opportunities for first-year students to grow, learn, and succeed.
+          Explore the ways we help students grow, learn, and succeed.
         </motion.p>
       </motion.div>
 
@@ -111,20 +111,20 @@ const WhatWeDo = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
+            className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center text-center p-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 * (index + 1) }}
           >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-[#50abe7]">{service.title}</h3>
-              <p className="mt-4 text-lg text-gray-600">{service.description}</p>
+            <div className="w-32 h-32 mb-4">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover rounded-full border-4 border-[#87ceeb]"
+              />
             </div>
+            <h3 className="text-2xl font-semibold text-[#50abe7]">{service.title}</h3>
+            <p className="mt-4 text-lg text-gray-600">{service.description}</p>
           </motion.div>
         ))}
       </div>

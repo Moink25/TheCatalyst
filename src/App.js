@@ -2,6 +2,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TeamPage from './components/TeamPage';
 import WhatWeDo from './components/WhatWeDo';
+import PastEventsPage from './components/PastEventsPage';
+import Footer from './components/Footer';
 // import TeamPageWithBackground from './components/TeamPageWithBackground';
 // import TechStack from './components/TechStack';
 // import Projects from './components/Projects';
@@ -18,6 +20,10 @@ function App() {
   <Hero/>
   <TeamPage/>
   <WhatWeDo/>
+  <PastEventsPage/>
+  <WhatWeDo/>
+  <Footer/>
+  
   {/* <TeamPageWithBackground/> */}
   {/* <TechStack/>
   <Projects/>
