@@ -33,48 +33,53 @@ const WhatWeDo = () => {
   useEffect(() => {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0xffffff);
+  
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
+  
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    bgRef.current.appendChild(renderer.domElement);
-
+  
+    const container = bgRef.current; // Copy the ref value to a variable
+    container.appendChild(renderer.domElement);
+  
     // Particle system
     const particles = new THREE.BufferGeometry();
-    const particleCount = 3000;
+    const particleCount = 3500;
     const positions = new Float32Array(particleCount * 3);
-
+  
     for (let i = 0; i < particleCount * 3; i++) {
       positions[i] = (Math.random() - 0.5) * 20;
     }
-
-    particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  
+    particles.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     const particleMaterial = new THREE.PointsMaterial({
       color: 0x87ceeb,
       size: 0.03,
     });
-
+  
     const particleMesh = new THREE.Points(particles, particleMaterial);
     scene.add(particleMesh);
-
+  
     camera.position.z = 5;
-
+  
     const animate = () => {
       requestAnimationFrame(animate);
       particleMesh.rotation.y += 0.001;
       renderer.render(scene, camera);
     };
-
+  
     animate();
-
+  
     return () => {
-      bgRef.current.removeChild(renderer.domElement);
+      container.removeChild(renderer.domElement); // Use the copied variable here
     };
   }, []);
+  
 
   return (
     <div className="relative w-full py-16 md:py-24 bg-[#f5f7fa] h-[200vh] md:h-[100vh]" id="what-we-do">
