@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { SiLeetcode } from "react-icons/si";
 import { FaGithubSquare, FaTwitter, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import profileImage from "../assets/m.png"; // Replace with your actual image path
 import image1 from "../assets/new_moin.png";
