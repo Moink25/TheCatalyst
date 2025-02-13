@@ -39,7 +39,7 @@ const TeamPage = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div id='team' className="relative w-full min-h-screen">
       {/* Full-Screen Three.js Starry Background */}
       <ThreeBackground className="absolute inset-0 z-0" />
 

@@ -43,7 +43,7 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <ul className="hidden md:flex gap-10 justify-center text-xl items-center mt-[-10px]">
-        {["home", "about us", "events", "team"].map((section, index) => (
+        {["home", "about-us", "events", "team"].map((section, index) => (
           <li key={index} className="hover:text-[#50abe7] hover:scale-105 cursor-pointer duration-200">
             <Link
               activeClass="active"
@@ -80,7 +80,7 @@ const Navbar = () => {
           <img src={profileImage} alt="Profile" className="h-[90%]" />
         </div>
         <ul className="p-4">
-          {["home", "about us", "events", "team"].map((section, index) => (
+          {["home", "about-us", "events", "team"].map((section, index) => (
             <li key={index} className="hover:text-[#ffdf00] hover:scale-105 cursor-pointer duration-200 mb-6">
               <Link
                 activeClass="active"
@@ -97,42 +97,6 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-
-      {/* Social Media Links (Desktop and Mobile) */}
-      {/* <div className="hidden md:flex space-x-6 justify-center items-center mt-4">
-        <a
-          href="https://github.com/Moink25/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl text-gray-600 hover:text-[#ffdf00] transition-all"
-        >
-          <FaGithubSquare />
-        </a>
-        <a
-          href="https://in.linkedin.com/in/moin-khan-a9b54528b"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl text-gray-600 hover:text-[#ffdf00] transition-all"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://x.com/ThinkIt4u"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl text-gray-600 hover:text-[#ffdf00] transition-all"
-        >
-          <FaTwitter />
-        </a>
-        <a
-          href="https://www.instagram.com/moink_25?igsh=MTV2bzUzY2U5aWZjMg=="
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl text-gray-600 hover:text-[#ffdf00] transition-all"
-        >
-          <FaInstagramSquare />
-        </a>
-      </div> */}
     </div>
   );
 };

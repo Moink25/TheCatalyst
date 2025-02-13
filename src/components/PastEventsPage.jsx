@@ -27,13 +27,13 @@ const PastEventsPage = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div id='events' className="relative w-full min-h-screen">
       {/* Full-Screen Three.js Starry Background */}
       <ThreeBackground className="absolute inset-0 z-0" />
 
       {/* Past Events Section */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
-        <header className="text-center mb-10">
+        <header className="text-center mb-10 pt-16">
           <h1 className="text-4xl font-bold text-white">
             Past <span className="text-blue-400">Events</span>
           </h1>
