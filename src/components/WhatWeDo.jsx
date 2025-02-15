@@ -82,7 +82,7 @@ const WhatWeDo = () => {
   
 
   return (
-    <div className="relative w-full py-16 md:py-24 bg-[#f5f7fa] h-[200vh] md:h-[100vh]" id="what-we-do">
+    <div id='about-us' className="relative w-full py-12 md:py-18 bg-[#f5f7fa] h-auto">
       {/* Particle Background */}
       <div ref={bgRef} className="absolute top-0 left-0 w-full h-full z-0" />
 
@@ -112,7 +112,7 @@ const WhatWeDo = () => {
       </motion.div>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16 relative z-10 pb-10">
         {services.map((service, index) => (
           <motion.div
             key={index}
